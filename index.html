@@ -53,6 +53,7 @@
           <h3>Mochila de sendero 32L</h3>
           <p class="price">$89.00</p>
           <button class="btn-add">Agregar al carrito</button>
+          <button class="btn-quickview" data-product="Mochila de sendero 32L" data-price="$89.00" data-desc="Capacidad de 32 litros, panel de espalda ventilado y correas ajustables para caminatas de día completo.">Vista rápida</button>
         </article>
 
         <article class="product-card">
@@ -62,6 +63,7 @@
           <h3>Botella térmica 750ml</h3>
           <p class="price">$24.00</p>
           <button class="btn-add">Agregar al carrito</button>
+          <button class="btn-quickview" data-product="Botella térmica 750ml" data-price="$24.00" data-desc="Mantiene líquidos fríos hasta 24 horas o calientes hasta 12 horas. Acero inoxidable de doble pared.">Vista rápida</button>
         </article>
 
         <article class="product-card">
@@ -71,6 +73,7 @@
           <h3>Botas WaterTrek</h3>
           <p class="price">$112.00</p>
           <button class="btn-add">Agregar al carrito</button>
+          <button class="btn-quickview" data-product="Botas WaterTrek" data-price="$112.00" data-desc="Impermeables, suela de agarre agresivo y membrana transpirable para terrenos húmedos.">Vista rápida</button>
         </article>
 
         <article class="product-card">
@@ -80,6 +83,7 @@
           <h3>Linterna frontal LumaPeak</h3>
           <p class="price">$35.00</p>
           <button class="btn-add">Agregar al carrito</button>
+          <button class="btn-quickview" data-product="Linterna frontal LumaPeak" data-price="$35.00" data-desc="350 lúmenes, 3 modos de iluminación y batería recargable con hasta 20 horas de autonomía.">Vista rápida</button>
         </article>
 
         <article class="product-card">
@@ -89,6 +93,7 @@
           <h3>Tienda de campaña Cumbre 2P</h3>
           <p class="price">$198.00</p>
           <button class="btn-add">Agregar al carrito</button>
+          <button class="btn-quickview" data-product="Tienda de campaña Cumbre 2P" data-price="$198.00" data-desc="Para 2 personas, montaje en menos de 5 minutos y doble techo resistente a lluvia fuerte.">Vista rápida</button>
         </article>
 
         <article class="product-card">
@@ -98,6 +103,7 @@
           <h3>Bastones ProStride (par)</h3>
           <p class="price">$46.00</p>
           <button class="btn-add">Agregar al carrito</button>
+          <button class="btn-quickview" data-product="Bastones ProStride (par)" data-price="$46.00" data-desc="Aluminio ajustable en 3 secciones, puntas intercambiables para roca y lodo.">Vista rápida</button>
         </article>
 
       </div>
@@ -107,6 +113,18 @@
   <footer class="site-footer">
     <p>© 2026 Trailforge. Equipo de senderismo para el Salvador.</p>
   </footer>
+
+  <div class="modal-overlay" id="quickViewOverlay" hidden>
+    <div class="modal" id="quickViewModal" role="dialog" aria-modal="true" aria-labelledby="quickViewTitle">
+      <button class="modal-close" id="quickViewClose" aria-label="Cerrar vista rápida">×</button>
+      <div class="modal-photo" id="quickViewPhoto"></div>
+      <h3 id="quickViewTitle"></h3>
+      <p class="modal-desc" id="quickViewDesc"></p>
+      <p class="price" id="quickViewPrice"></p>
+      <button class="btn-add" id="quickViewAdd">Agregar al carrito</button>
+      <a href="#gear" class="modal-link" id="quickViewLink">Ver más equipo similar</a>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
